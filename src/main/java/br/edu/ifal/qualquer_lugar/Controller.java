@@ -17,4 +17,8 @@ public class Controller{
         return new ModelAndView("menu.html");
     }
 
+    @RequestMapping("/carrinho")
+    public ModelAndView carrinho(){
+        return new ModelAndView("carrinho.html");
+    }
 }
