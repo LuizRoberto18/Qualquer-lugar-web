@@ -17,8 +17,13 @@ public class Controller{
         return new ModelAndView("menu.html");
     }
 
-    @RequestMapping("/carrinho")
+    @RequestMapping("/cadastrar")
     public ModelAndView carrinho(){
-        return new ModelAndView("carrinho.html");
+        return new ModelAndView("cadastrar.html");
+    }
+
+    @RequestMapping("/favoritos")
+    public ModelAndView favoritos(){
+        return new ModelAndView("favoritos.html");
     }
 }
