@@ -1,4 +1,4 @@
-package br.edu.ifal.qualquer_lugar;
+package br.edu.ifal.qualquer_lugar.controllers;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

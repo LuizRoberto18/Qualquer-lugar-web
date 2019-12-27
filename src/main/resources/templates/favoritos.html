@@ -25,9 +25,33 @@
             font-size: 3.5rem;
           }
         }
+
+        p{
+          color: black;
+        }
+        .btn-favorito{
+          background-image: url("icons/heart.png");
+          width: 26px;
+          height: 26px;
+          position: center;
+        }
       </style>
+
+       <script >
+        var acesa = false;
+        function mudarCoracao(tipo){
+          if (!acesa) {
+            document.getElementById("coracao").src = "icons/" + "like" + ".png";
+            acesa = true;
+          }
+          else{
+            document.getElementById("coracao").src = "icons/" + "like-vazio" + ".png";
+            acesa = false
+          }
+        }
+      </script>
       <!-- Custom styles for this template -->
-      <link href="css/index.css" rel="stylesheet">
+      <link href="css/favoritos.css" rel="stylesheet">
   </head>
   <body class="text-center">
     
@@ -42,14 +66,39 @@
             </nav>
           </div>
         </header>
+        <main role="main" style="background-color: #333;">
+
+          <section class="jumbotron text-center">
+            <div class="container">
+              <h1>Cardapio pra QualQuer coisa</h1>
+              <p class="lead text-muted">Nunca mais seu(sua) parceiro(a) ficará irritado sem saber o que te dar de comer.<p>
+            </div>
+          </section>
+
+        <div class="album py-5 bg-light">
+          <div class="container">
       
-        <main role="main" class="inner cover">
-          <h1 class="cover-heading">QualQuer Lugar Virtual.</h1>
-          <p class="lead">Qualquer Lugar é o lugar ideal para casais indecisos. Numca mais irá perder a paciência caso seu parceiro queira comer mas não tem uma opnião certa sobre o que e onde comer.</p>
-          <p class="lead">
-            <a href="/menu" class="btn btn-lg btn-secondary">Nosso Cardapio</a>
-          </p>
-        </main>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                  <img src="images/burguer1.jpg" width="100%" height="100%">
+                  <div class="card-body">
+                    <p class="card-text" >TAANTO FAZ</p>
+                    <p>não inporta o que tem.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <img src="icons/like-vazio.png" id="coracao" onclick="mudarCoracao('like')" width="40px" height="40px">
+                      </div>
+                      <small class="text-muted">10 R$</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+      </main>
       
         <footer class="mastfoot mt-auto">
           <div class="inner">
